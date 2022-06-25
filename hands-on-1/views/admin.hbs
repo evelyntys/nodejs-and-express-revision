@@ -1,0 +1,25 @@
+{{#extends 'base'}}
+{{#block 'content'}}
+<div class="container">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Fault</th>
+      <th scope="col">Contact number</th>
+      <th scope="col">Controls</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Mark</th>
+      <td>Lift</td>
+      <td>87120492</td>
+      <td><input type='submit' class='btn btn-warning' value="edit">
+      <input type='submit' class='btn btn-danger' value="delete"></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+{{/block}}
+{{/extends}}

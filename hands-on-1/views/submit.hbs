@@ -1,0 +1,30 @@
+{{#extends 'base'}}
+{{#block 'content'}}
+<div class="container">
+    <h1>submit a new fault</h1>
+    <div class="row">
+        <div class="col-6">
+            <label> name: </label>
+            <input type="text" class="form-control">
+        </div>
+        <div class="col-3">
+            <label> unit number: </label>
+            <input type="text" class="form-control">
+        </div>
+        <div class="col-3">
+            <label> contact number: </label>
+            <input type="text" class="form-control">
+        </div>
+        <div class="col-12">
+            <label> type of fault: </label>
+            <input type="text" class="form-control">
+        </div>
+        <div class="col-12">
+            <label> description: </label>
+            <textarea class="form-control" placeholder="please enter the details"></textarea>
+        </div>
+    </div>
+    <input type="submit" value="submit" class="mt-2 btn btn-primary">
+</div>
+{{/block}}
+{{/extends}}

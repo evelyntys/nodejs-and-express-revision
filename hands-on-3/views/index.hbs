@@ -1,0 +1,51 @@
+{{#extends 'base'}}
+{{#block 'content'}}
+<form method="POST">
+    <div class="container">
+        <h1>lost and found reporting</h1>
+        <div class="row">
+            <div class="col-6">
+                <label>name of item:</label>
+                <input type="text" class="form-control" name="name">
+            </div>
+            <div class="col-6">
+                <label>email address:</label>
+                <input type="email" class="form-control" name="email">
+            </div>
+            <div class="col-12">
+                <div>where did you leave it?</div>
+                <label>taxi</label>
+                <input type="radio" name="place" value="taxi">
+                <label>bus</label>
+                <input type="radio" name="place" value="bus">
+                <label>mrt</label>
+                <input type="radio" name="place" value="mrt">
+                <label>others</label>
+                <input type="radio" name="place" value="others">
+            </div>
+            <div class="col-12 d-none show">
+                <label>please fill in details</label>
+                <input type="text" name="details" value="others">
+            </div>
+            <div class="col-12">
+                <div>please select those that apply:</div>
+                <label>bulky</label>
+                <input type="checkbox" name="properties" value="bulky">
+                <label>expensive</label>
+                <input type="checkbox" name="properties" value="expensive">
+                <label>colorful</label>
+                <input type="checkbox" name="properties" value="colorful">
+                <label>branded</label>
+                <input type="checkbox" name="properties" value="branded">
+                <label>small</label>
+                <input type="checkbox" name="properties" value="small">
+                <label>plain</label>
+                <input type="checkbox" name="properties" value="plain">
+            </div>
+        </div>
+        <input type="submit" value="submit" class="btn btn-primary">
+    </div>
+</form>
+
+{{/block}}
+{{/extends}}

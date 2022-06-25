@@ -1,0 +1,25 @@
+{{#extends 'base'}}
+{{#block 'content'}}
+<form method="POST">
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <label>height: </label>
+            <input type="text" class="form-control" name="height">
+        </div>
+         <div class="col">
+            <label>weight: </label>
+            <input type="text" class="form-control" name="weight">
+        </div>
+        <div class='col-12'>
+        <input type="radio" name="units" id="si" value="si">
+        <label for="si">si units</label>
+        <input type="radio" name="units" id="imperial" value="imperial">
+        <label for="imperial">imperial units</label>
+        </div>
+    </div>
+    <input type="submit" class="btn btn-primary text-center mx-auto" value="calculate bmi">
+</div>
+</form>
+{{/block}}
+{{/extends}}
