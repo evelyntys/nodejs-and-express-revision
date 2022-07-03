@@ -1,0 +1,27 @@
+{{#extends 'base'}}
+
+{{#block "content"}}
+<div class="container">
+    <h1>Food Details:{{foodRecord.foodName}}</h1>
+    <ul>
+        <li>Calories: {{foodRecord.calories}}</li>
+        <li>Tags:{{join foodRecord.tags ", "}}</li>
+    </ul>
+
+    <h2>Notes</h2>
+    {{#each foodRecord.notes}}
+    <div class="card mt-3">
+        <div class="card-body">
+            {{this.content}}
+        </div>
+        <div class="card-footer">
+            <a href="/note/{{this._id}}/edit" class="btn btn-primary">Edit</a>
+            <a href="/note/{{this._id}}/delete" class="btn btn-danger">Delete</a>
+        </div>
+
+    </div>
+    {{/each}}
+</div>
+{{/block}}
+
+{{/extends}}

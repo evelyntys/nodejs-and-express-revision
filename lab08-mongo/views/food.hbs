@@ -1,0 +1,43 @@
+{{#extends 'base'}}
+
+{{#block 'content'}}
+<div class="container">
+<h1>Food Tracker</h1>
+
+<a href="/food/add" class="btn btn-success mb-3">Add New Food</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Calories</th>
+            <th>Tags</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+     
+        {{#each foodRecords}}
+           <tr>
+                <td>
+                    <a href="/food/{{this._id}}">{{this.foodName}}</a>
+                </td>
+                <td>{{this.calories}}</td>
+                <td>{{join this.tags ", "}}</td>
+                <td>
+                     <a href="/food/{{this._id}}/notes/add" class="btn btn-success">Add Note</a>
+                    <a href="/food/{{this._id}}/edit" class="btn btn-primary">Edit</a>
+                    <a href="/food/{{this._id}}/delete" class="btn btn-danger">Delete</a>
+                   
+                </td>
+            </tr>
+        {{/each}}
+       
+    </tbody>
+
+
+</table>
+</div>
+{{/block}}
+
+{{/extends}}

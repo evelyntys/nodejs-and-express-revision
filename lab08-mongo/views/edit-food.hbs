@@ -1,0 +1,46 @@
+{{#extends 'base'}}
+
+{{#block "content"}}
+<div class="container">
+<form method="POST">
+    <div>
+        <label class="form-label">Food Name:</label>
+        <input type="text" class="form-control" name="foodName" value="{{foodRecord.foodName}}"/>
+    </div>
+    <div>
+        <label class="form-label">Calories</label>
+        <input type="text" class="form-control" name="calories" value="{{foodRecord.calories}}"/>
+    </div>
+    <div>
+        <label class="form-label">Tags</label>
+        <div class="form-check form-check-inline">
+            <div class="ml-3">
+                <input name="tags" class="form-check-input" 
+                       type="checkbox" id="unhealthy-checkbox" 
+                       value="unhealthy" {{#inArray foodRecord.tags "unhealthy"}}checked{{/inArray}}>
+                <label class="form-check-label" for="unhealthy-checkbox">Unhealthy</label>
+            </div>
+            <div class="ml-3">
+                <input name="tags" class="form-check-input"
+                       type="checkbox" id="snack-checkbox"
+                       value="snack" {{#inArray foodRecord.tags "snack"}}checked{{/inArray}}>
+                <label class="form-check-label" for="snack-checkbox">Snack</label>
+            </div>
+            <div class="ml-3">
+                <input name="tags" class="form-check-input"
+                       type="checkbox" id="homecooked-checkbox"
+                       value="homecooked" {{#inArray foodRecord.tags "homecooked"}} checked {{/inArray}}>
+                <label class="form-check-label" for="homecooked-checkbox">Homecooked</label>
+            </div>
+        </div>
+    </div>
+    <div>
+        <input type="submit" class="btn btn-primary" value="update"/>
+    </div>
+</form>
+</div>
+
+{{/block}}
+
+{{/extends}}
+
